@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.cdnfonts.com/css/e-escotia-script");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --primary-color: #E69125;
+  --secondary-color: #E7B97F;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 9em;
+  background-color: #444444;
+  color: white;
+}
+
+.head-container {
+  display: none;
+}
+.head-container .search-container form {
+  background-color: #545454;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+}
+.head-container .search-container form input {
+  all: unset;
+  font: 16px white;
+  font-family: "Cormorant Garamond", serif;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+  margin-left: 15px;
+}
+.head-container .search-container form input ::-moz-placeholder {
+  color: #fff;
+  opacity: 1.5;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.head-container .search-container form input ::placeholder {
+  color: #fff;
+  opacity: 1.5;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.head-container .search-container form input.hide-clear[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.head-container .search-container form button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+.head-container .search-container form svg {
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+.head-container .buttons {
+  margin: 1em;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-container .buttons .heart:hover, .head-container .buttons .home:hover {
+  cursor: pointer;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+}
+.head-container .buttons .settings:hover {
+  cursor: pointer;
+}
+.head-container .buttons .settings:hover .outside {
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+}
+.head-container .buttons .settings:hover .inside {
+  fill: #444444;
+  stroke: var(--primary-color);
+}
+.head-container .buttons .home {
+  width: 3em;
+  height: 3em;
+  margin-left: 2em;
+}
+.head-container .buttons .heart {
+  width: 2.8em;
+  height: 2.8em;
+  margin-left: 0.5em;
+}
+.head-container .buttons .settings {
+  width: 3em;
+  height: 3em;
+  margin-left: 0.5em;
+}
+
+.title-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  margin-left: 2em;
+  margin-right: 3em;
+}
+.title-card .back-button {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+.title-card .back-button:hover {
+  cursor: pointer;
+}
+.title-card .recipe-name {
+  text-transform: lowercase;
+  font-family: "e Escotia Script", sans-serif;
+  color: var(--primary-color);
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.recipe-info .pictures {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2em;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.recipe-info .recipe-photo {
+  width: 100%;
+  height: 13em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.recipe-info .heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 100%;
+  bottom: 1em;
+  left: 1em;
+}
+.recipe-info .heart:hover {
+  cursor: pointer;
+  fill: var(--primary-color);
+}
+
+.other-info {
+  margin-top: 5px;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+.other-info p {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  line-height: 18px;
+}
+.other-info .l1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-content: right;
+  margin-right: 2em;
+}
+.other-info .filler1, .other-info .author {
+  margin-right: 5px;
+  margin-bottom: 30px;
+  font-size: smaller;
+  display: grid;
+  place-content: right;
+}
+.other-info .filler {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.ingredients {
+  margin: 2em 2em;
+}
+.ingredients h {
+  text-transform: lowercase;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: bold;
+}
+.ingredients ul {
+  list-style-type: none;
+}
+.ingredients .container {
+  display: block;
+  position: relative;
+  padding-left: 2em;
+  padding-bottom: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.ingredients .container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.ingredients .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: #eee;
+}
+.ingredients .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.ingredients .container input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+}
+.ingredients .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.ingredients .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.ingredients .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.steps {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.steps h {
+  text-transform: lowercase;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 1em;
+}
+.steps .step {
+  display: flex;
+  flex-direction: row;
+}
+.steps .step .step-no {
+  width: 1em;
+  margin: 0;
+  margin-top: 0.4em;
+  margin-right: 10px;
+  display: inline;
+  text-align: center;
+  font-family: "e Escotia Script", sans-serif;
+  color: var(--primary-color);
+  font-size: 3em;
+}
+.steps .step .step-info {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 4em;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Open Sans", sans-serif;
+}
+
+.recipe-tags {
+  display: flex;
+  flex-direction: row;
+}
+.recipe-tags h {
+  text-transform: lowercase;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.recipe-tags .tags {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-right: 2em;
+}
+.recipe-tags .tags li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  background-color: var(--secondary-color);
+  color: brown;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  padding: 0.5em;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 25px;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom {
+  background-color: #545454;
+}
+.bottom ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3em;
+  margin-left: 1em;
+  margin-top: 1.5em;
+}
+.bottom ul .icon svg {
+  height: 3.5em;
+  width: 3.5em;
+}
+.bottom ul .icon svg:hover {
+  cursor: pointer;
+  stroke: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-logo {
+    display: none;
+  }
+  .other-info .recipe-name {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mobile-logo {
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-logo .logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+    margin-top: -1em;
+    padding: 0;
+    width: 10em;
+    height: 10em;
+  }
+  .mobile-logo .navbar {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+    background: #545454;
+    margin: 0 0 2em 0;
+    padding: 15px 0 15px 0;
+    height: 8em;
+  }
+  .mobile-logo nav {
+    display: flex;
+    justify-content: space-between;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .mobile-logo ul {
+    display: flex;
+    list-style: none;
+    margin: 3em;
+  }
+  .mobile-logo a {
+    color: #E7B97F;
+    font-size: 1em;
+    padding: 0.1em 1em;
+    text-decoration: none;
+  }
+  .mobile-logo a:hover {
+    color: var(--primary-color);
+  }
+  .mobile-logo li {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    list-style: none;
+    font-size: 1.5em;
+    padding-left: 0.3em;
+  }
+  .mobile-logo .top-search {
+    height: 1.8em;
+    width: 1.8em;
+  }
+  .title-card {
+    display: none;
+  }
+  .recipe-info {
+    display: flex;
+    flex-direction: row;
+  }
+  .recipe-info .other-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .recipe-info .other-info .recipe-name {
+    display: grid;
+    grid-template-columns: 300px;
+    word-wrap: normal;
+    text-transform: lowercase;
+    font-family: "e Escotia Script", sans-serif;
+    color: var(--primary-color);
+    font-size: 5em;
+    font-weight: 400;
+    margin-right: 2em;
+  }
+  .recipe-info .other-info p {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 24px;
+  }
+  .recipe-info .other-info .filler, .recipe-info .other-info .filler1 {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .recipe-info .other-info .l2, .recipe-info .other-info .l3 {
+    display: inline;
+    text-align: right;
+    margin-right: 2em;
+  }
+  .recipe-info .pictures {
+    width: 60%;
+  }
+  .recipe-info .pictures .recipe-photo {
+    height: 30em;
+  }
+  .bottom {
+    display: none;
+  }
+  .steps .step {
+    display: flex;
+    flex-direction: column;
+    font-size: 110%;
+    font-family: "Open Sans", sans-serif;
+  }
+  .recipe-tags {
+    margin-top: 3em;
+  }
+  .recipe-tags .tags {
+    margin-top: 1em;
+    scale: 110%;
+  }
+  .ingredients h, .steps h {
+    font-size: 300%;
+  }
+}/*# sourceMappingURL=recipe-style.css.map */

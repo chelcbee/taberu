@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.cdnfonts.com/css/e-escotia-script");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --primary-color: #E69125;
+  --secondary-color: #E7B97F;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 9em;
+  background-color: #444444;
+  color: white;
+}
+
+.mobile-logo {
+  margin: 0;
+  padding: 0;
+}
+.mobile-logo .logo {
+  display: inline-block;
+  width: 12em;
+  height: 12em;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.mobile-logo .top-search {
+  width: 3em;
+  height: 3em;
+}
+
+.b1, .b2 {
+  margin-top: 2em;
+}
+
+.buttons {
+  margin-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h4, p {
+  padding: 2em;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  width: 30em;
+}
+
+h4 {
+  font-weight: normal;
+  padding-bottom: 0;
+}
+
+button {
+  border: none;
+  background: var(--primary-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: 2em;
+}
+button:hover {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  font-family: "Open Sans", sans-serif;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: var(--primary-color);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #444444;
+  padding: 30px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bottom {
+  background-color: #545454;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.bottom ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3em;
+  margin-left: 1em;
+  margin-top: 1.5em;
+}
+.bottom ul .info {
+  stroke: var(--primary-color);
+  scale: 115%;
+}
+.bottom ul .icon svg {
+  height: 3.5em;
+  width: 3.5em;
+}
+.bottom ul .icon svg:hover {
+  cursor: pointer;
+  stroke: var(--primary-color);
+}
+
+.navigation {
+  display: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bottom {
+    display: none;
+  }
+  .mobile-logo {
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-logo .logo {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    top: -1em;
+    left: 6em;
+    width: 10em;
+    height: 10em;
+  }
+  .mobile-logo .navbar {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+    background: #545454;
+    margin: 0 0 2em 0;
+    padding: 15px 0 15px 0;
+    height: 9.9em;
+  }
+  .mobile-logo nav {
+    display: flex;
+    justify-content: space-between;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .mobile-logo .navi3 h {
+    color: var(--primary-color);
+  }
+  .mobile-logo ul {
+    display: flex;
+    list-style: none;
+    margin: 3em;
+  }
+  .mobile-logo a {
+    color: #E7B97F;
+    font-size: 1em;
+    padding: 0.1em 1em;
+    text-decoration: none;
+  }
+  .mobile-logo a:hover {
+    color: var(--primary-color);
+  }
+  .mobile-logo li {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    list-style: none;
+    font-size: 1.5em;
+    padding-left: 0.3em;
+  }
+  .mobile-logo .top-search {
+    font-size: 0.6em;
+  }
+}/*# sourceMappingURL=info-style.css.map */

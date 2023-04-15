@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+// font-family: 'Cormorant Garamond', serif;
+@import url('https://fonts.cdnfonts.com/css/e-escotia-script');
+// font-family: 'e Escotia Script', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// font-family: 'Open Sans', sans-serif;
+:root {
+    --primary-color: #E69125;
+    --secondary-color: #E7B97F;
+}
+
+body {
+    margin: 0;
+    //margin-top: 1em;
+    //margin-left: 1.5em;
+    padding: 0;
+    padding-bottom: 9em;
+    background-color: #444444;
+    color: white;
+
+}
+
+
+.mobile-logo{
+    margin: 0em 0;
+    padding: 0;
+
+    .logo{
+        display: inline-block;
+        width: 12em;
+        height: 12em;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+
+    .top-search{
+        width: 3em;
+        height: 3em;
+
+    }
+}
+
+
+.fave-list {
+
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    li {
+        display: grid;
+        grid-template-columns: 200px auto;
+        position: relative;
+        bottom: 0;
+        right: -1.9em;
+        margin-right: 0em;
+        margin-top: 1em;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1em;
+
+        .heart{
+            left: 6.5em;
+            top: 6.5em;
+        }
+    
+        
+    }
+    .food-pic {
+        position: relative;
+        object-fit: cover;
+        bottom: 0;
+        right: 0;
+        height: 10em;
+        width: 10em;
+        border-radius: 1em;
+    }
+    
+    
+    .heart {
+        position: absolute;
+        width:30px;
+        height:30px;
+        background-color: white;
+        padding: 8px;
+        border-radius: 100%;
+        bottom: 2.5em;
+        right: 1em;
+    }
+
+    .food-pic:hover {
+        cursor: pointer;
+    }
+
+    .heart:hover{
+        cursor: pointer;
+        fill: var(--primary-color);
+    }
+}
+    
+nav {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom {
+    background-color: #545454;
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 3em;
+        margin-left: 1em;
+        margin-top: 1.5em;
+
+        .saved {
+            stroke: var(--primary-color);
+            scale: 105%;
+            fill: var(--primary-color);
+        }
+
+        .icon{
+  
+            svg {
+                height: 3.5em;
+                width: 3.5em;
+            }
+            svg:hover{
+                cursor: pointer;
+                stroke: var(--primary-color);
+            }
+        }
+    }
+}
+
+.navigation{
+    display: none;
+}
+
+ul::-webkit-scrollbar {
+    display:none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-logo{
+        margin: 0 0;
+        padding: 0;
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            top: -1em;
+            left: 6em;
+            width: 10em;
+            height: 10em;
+        }
+
+        .navbar{
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: unset;
+            background: #545454;
+            margin:  0 0 2em 0;
+            padding: 15px 0 15px 0;;
+            height: 8em;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            position: unset;
+            height: auto;
+            width: 100%;
+            padding: 0;
+        }
+
+        .navi2 h {
+            color: var(--primary-color);
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            margin: 3em;
+        }
+
+        a{
+            color:#E7B97F;
+            font-size: 1em;
+            padding: .1em 1em;
+            text-decoration: none;
+
+            &:hover{
+                color: var(--primary-color);
+            }
+
+        }
+
+        li{
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            list-style: none;
+            font-size: 1.5em;
+            padding-left: .3em;
+        
+        }
+        .top-search{
+            font-size: .6em;
+        }
+    }
+
+    .bottom{
+        display: none;
+    }
+}

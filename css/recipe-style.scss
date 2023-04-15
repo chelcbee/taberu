@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+// font-family: 'Cormorant Garamond', serif;
+@import url('https://fonts.cdnfonts.com/css/e-escotia-script');
+// font-family: 'e Escotia Script', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// font-family: 'Open Sans', sans-serif;
+
+:root {
+    --primary-color: #E69125;
+    --secondary-color: #E7B97F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9em;
+    background-color: #444444;
+    color: white;
+}
+
+
+.head-container {
+    display:none;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // margin-top: 1.5em;
+
+    .search-container {
+        form {
+            background-color: #545454;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 2em;
+            margin-right: 2em;
+            margin-top: 1em;
+      
+            input {
+                all: unset;
+                font: 16px white;
+                font-family: 'Cormorant Garamond', serif;
+                height: 100%;
+                width: 100%;
+                padding: 6px 10px;
+                margin-left: 15px;
+    
+                ::placeholder {
+                    color: #fff;
+                    opacity: 1.5; 
+                    font-family: 'Cormorant Garamond', serif;
+                    font-weight: 500;
+                    letter-spacing: 5px;
+                }
+            }
+    
+            input.hide-clear[type="search"]::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+            }
+            
+            button {
+                all: unset;
+                cursor: pointer;
+                width: 44px;
+                height: 44px;
+            }
+              
+            svg {
+                color: #fff;
+                fill: currentColor;
+                width: 24px;
+                height: 24px;
+                padding: 10px;
+            }
+        }
+    }
+
+    .buttons {
+        margin: 1em;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .heart:hover, .home:hover{
+            cursor: pointer;
+            fill: var(--primary-color);
+            stroke: var(--primary-color);
+        }
+
+        .settings:hover {
+            cursor: pointer;
+            .outside {
+                fill: var(--primary-color);
+                stroke: var(--primary-color);
+            }
+            .inside {
+                fill:#444444;
+                stroke: var(--primary-color);
+            }
+        }
+
+        .home {
+            width: 3em;
+            height: 3em;
+            margin-left: 2em;
+        }
+
+        .heart{ 
+            width: 2.8em;
+            height: 2.8em;
+            margin-left: .5em;
+        }
+    
+        .settings {
+            width: 3em;
+            height: 3em;
+            margin-left: .5em;
+        }   
+    }
+}
+
+.title-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    margin-left: 2em;
+    margin-right: 3em;
+
+    .back-button {
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+    }
+
+    .back-button:hover{
+        cursor: pointer;
+    }
+
+    .recipe-name{
+        text-transform: lowercase;
+        font-family: 'e Escotia Script', sans-serif;
+        color: var(--primary-color);
+        font-size: 3em;
+        font-weight: 400;
+    }
+}
+
+.recipe-info{
+    .pictures{
+        display: flex;
+        flex-direction: row;
+        margin: 0 2em;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+
+    .recipe-photo{
+        width: 100%;
+        height: 13em;
+        object-fit: cover;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    .heart {
+        position: absolute;
+        width:50px;
+        height:50px;
+        background-color: white;
+        padding: 8px;
+        border-radius: 100%;
+        bottom: 1em;
+        left: 1em;
+    }
+    
+    .heart:hover{
+        cursor: pointer;
+        fill: var(--primary-color);
+    }
+}
+
+.other-info{
+    margin-top: 5px;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+
+    p{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        line-height: 18px;
+
+    }
+
+    .l1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-content: right;
+        margin-right: 2em;
+    }
+
+    .filler1, .author{
+        margin-right: 5px;
+        margin-bottom: 30px;
+        font-size: smaller;
+        display: grid;
+        place-content: right;
+    }
+
+    .filler{
+        font-weight: bold;
+        margin-right: 5px;
+    }
+  
+}
+
+.ingredients {
+    margin: 2em 2em;
+    h {
+        text-transform: lowercase;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--primary-color);
+        font-size: 2em;
+        font-weight: bold;
+    }
+    ul{
+        list-style-type: none;
+    }
+
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 2em;
+        padding-bottom: 8px;
+        font-family: 'Open Sans', sans-serif;
+
+        font-size: 1.2em;
+        font-weight: 100;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 5px;
+        height: 20px;
+        width: 20px;
+        border-radius:3px;
+        background-color: #eee;
+    }
+
+    .container:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+
+    .container input:checked ~ .checkmark {
+        background-color: var(--primary-color);
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+}
+
+.steps {
+    margin-bottom: 20px;
+    h {
+        text-transform: lowercase;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--primary-color);
+        font-size: 2em;
+        font-weight: bold;
+        margin-left: 1em;
+    }
+
+    display: flex;
+    flex-direction: column;
+    .step {
+        display: flex;
+        flex-direction: row;
+
+        .step-no{
+            width: 1em;
+            margin:0;
+            margin-top: .4em;
+            margin-right: 10px;
+
+            display: inline;
+            text-align: center;
+            font-family: 'e Escotia Script', sans-serif;
+            color: var(--primary-color);
+            font-size: 3em;
+        }
+
+        .step-info {
+            width:fit-content;
+            margin-right: 4em;
+            text-align: justify;
+            text-justify: inter-word;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+}
+
+.recipe-tags {
+    display: flex;
+    flex-direction: row;
+
+    h {
+        text-transform: lowercase;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--primary-color);
+        font-size: 2em;
+        font-weight: bold;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .tags {
+        margin:0;
+        padding:0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding-right: 2em;
+
+        li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            background-color: var(--secondary-color);
+            color: brown;
+            font-weight: bold;
+            text-align: center;
+            
+            margin:0;
+            padding:0;
+            margin-bottom: 10px;
+            margin-right: 15px;;
+            padding:.5em;
+            height:fit-content;
+            width:max-content;
+            border-radius: 25px;
+        }
+    }
+}
+
+nav {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom {
+    background-color: #545454;
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 3em;
+        margin-left: 1em;
+        margin-top: 1.5em;
+
+        .icon{
+  
+            svg {
+                height: 3.5em;
+                width: 3.5em;
+            }
+            svg:hover{
+                cursor: pointer;
+                stroke: var(--primary-color);
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-logo{
+        display: none;
+    }
+
+    .other-info {
+        .recipe-name{
+            display:none;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .mobile-logo{
+        margin: 0;
+        padding: 0;
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+            margin-left: 1em;
+            margin-top: -1em;
+            padding: 0;
+            width: 10em;
+            height: 10em;
+        }
+
+        .navbar{
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: unset;
+            background: #545454;
+            margin:  0 0 2em 0;
+            padding: 15px 0 15px 0;;
+            height: 8em;
+
+         
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            position: unset;
+            height: auto;
+            width: 100%;
+            padding: 0;
+
+        }
+
+
+
+        ul{
+            display: flex;
+            list-style: none;
+            margin: 3em;
+        }
+
+        a{
+            color:#E7B97F;
+            font-size: 1em;
+            padding: .1em 1em;
+            text-decoration: none;
+
+            &:hover{
+                color: var(--primary-color);
+            }
+
+        }
+
+        li{
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            list-style: none;
+            font-size: 1.5em;
+
+            padding-left: .3em;
+
+         
+        
+        }
+        .top-search{
+            height: 1.8em;
+            width: 1.8em;
+        }
+    }
+
+    .title-card{
+      display: none;
+    }
+
+    .recipe-info{
+        display: flex;
+        flex-direction: row;
+
+        .other-info {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            .recipe-name{
+                display: grid;
+                grid-template-columns: 300px;
+                word-wrap: normal;
+                text-transform: lowercase;
+                font-family: 'e Escotia Script', sans-serif;
+                color: var(--primary-color);
+                font-size: 5em;
+                font-weight: 400;
+                margin-right: 2em;
+            }
+
+            p{
+                font-size: 1.5em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                line-height: 24px;
+            }
+        
+            .filler, .filler1{
+                font-weight: bold;
+                margin-right: 5px;
+            }
+
+            .l2, .l3{
+                display: inline;
+                text-align: right;
+                margin-right: 2em;
+            }
+        }
+
+        .pictures {
+            width: 60%;
+            .recipe-photo {
+                height: 30em;
+            }
+        }
+    }
+
+    .bottom {
+        display: none;
+    }
+
+    .steps .step {
+        display: flex;
+        flex-direction: column;
+        font-size: 110%;
+        font-family: 'Open Sans', sans-serif;
+
+    }
+
+    .recipe-tags {
+        margin-top: 3em;
+
+        .tags {
+            margin-top: 1em;
+            scale: 110%;
+        }
+    }
+
+    .ingredients h, .steps h {
+        font-size: 300%;
+    }
+
+
+}
